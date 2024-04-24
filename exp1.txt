@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+//Factorial of the number using Recursive method
+int recursiveFactorial(int num){
+if(num==0||num==1){
+return 1;
+}
+else{
+return num*recursiveFactorial(num-1);
+}
+}
+// Factorial of the number using iterative method
+int iterativeFactorial(int num){
+int fact=1;
+for(int i=1;i<=num;i++){
+fact=fact*i;
+}
+return fact;
+}
+int main(){
+int result=recursiveFactorial(5);
+int result_1=iterativeFactorial(8);
+cout<<"Factorial of the number is :"<<result<<endl;
+cout<<"Factorial of the number is : "<<result_1;
+return 0;
+}
